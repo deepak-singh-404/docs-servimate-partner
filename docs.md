@@ -555,4 +555,175 @@
     }
 }
 ```
+==============================================================================================================
+**REQUESTED JOB**
 
+**URL** : `/partner/dev/api/v1/bookings/requested`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "count": 1,
+    "message": "Here is the booking request",
+    "response": [
+        {
+            "extraCharge": {
+                "type": "hygenic",
+                "amount": 25
+            },
+            "bookingJourney": {
+                "isStarted": false,
+                "isStopped": false,
+                "isCustomerPaid": false,
+                "amountPaidByCustomer": 0
+            },
+            "services": [
+                {
+                    "quantity": 1,
+                    "createdAt": "2021-11-22T18:17:28.628Z",
+                    "_id": "619bdeb8af020900629940f5",
+                    "serviceCategory": "610bbcb4d5a9ca0039f4f1d0",
+                    "serviceId": "613cdde3744f2d0062a6de5b",
+                    "serviceName": "Fruit Facial",
+                    "actualPrice": 657,
+                    "discountedPrice": 450
+                },
+                {
+                    "quantity": 1,
+                    "createdAt": "2021-11-22T18:17:22.284Z",
+                    "_id": "619bdeb20f1790005737de97",
+                    "serviceCategory": "610bbcb4d5a9ca0039f4f1d0",
+                    "serviceId": "613cdc9616be6600571fb647",
+                    "serviceName": "Rica Waxology (Full arms, Legs & UA)",
+                    "actualPrice": 1299,
+                    "discountedPrice": 850
+                },
+                {
+                    "quantity": 1,
+                    "createdAt": "2021-11-22T18:17:19.885Z",
+                    "_id": "619bdeafd4f824003af2c6c5",
+                    "serviceCategory": "610bbcb4d5a9ca0039f4f1d0",
+                    "serviceId": "613cdc1f896e500021025183",
+                    "serviceName": "Honey Wax (Full Arms, Underarms & Legs) + Threading",
+                    "actualPrice": 850,
+                    "discountedPrice": 499
+                },
+                {
+                    "quantity": 1,
+                    "createdAt": "2021-11-22T18:17:10.041Z",
+                    "_id": "619bdea6b5c4320028e5f40b",
+                    "serviceCategory": "610bbcb4d5a9ca0039f4f1d0",
+                    "serviceId": "613a1ad900c2e7005be3eaf0",
+                    "serviceName": "All in one ",
+                    "actualPrice": 1837,
+                    "discountedPrice": 1378
+                }
+            ],
+            "isServiceProviderAssigned": false,
+            "isJobDone": false,
+            "isRequestedToCancelService": false,
+            "rating": 0,
+            "isCancelled": false,
+            "isAdminCancelledService": false,
+            "isAdminApprovedCancellationRequest": false,
+            "requestedServiceProviders": [
+                "619140d1ddfb25430cb2e3fd",
+                "619140f0ddfb25430cb2e3fe"
+            ],
+            "systemOrManual": 0,
+            "isFeedbackGivenByCustomer": false,
+            "_id": "619be06546f2c84f5071a4e8",
+            "bookingId": "81lMez1A4",
+            "serviceCategoryId": "610bbcb4d5a9ca0039f4f1d0",
+            "customerId": "6191382c5142700050adac7e",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "cod",
+            "isPaid": false,
+            "timeSlot": "02:30 PM  -  03:00 PM",
+            "serviceDate": "2021-11-28",
+            "finalPrice": 3202,
+            "cartAmount": 3177,
+            "timeOfBooking": "2021-11-22T18:24:37.049Z",
+            "createdAt": "2021-11-22T18:24:37.049Z",
+            "approvedAt": "2021-11-22T18:24:37.049Z",
+            "__v": 0
+        }
+    ]
+}
+```
+
+==============================================================================================================
+**ACCEPT JOB**
+
+**URL** : `/partner/dev/api/v1/booking/accept/6191419c4250d65fe46e7c5d`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "Booking accepted successfully",
+    "response": {
+        "_id": "6191419c4250d65fe46e7c5d",
+        "bookingId": "bHNHgea9A",
+        "serviceProviderId": "619140d1ddfb25430cb2e3fd",
+        "serviceProviderName": "Deepak Singh",
+        "requestedServiceProviders": [],
+        "isServiceProviderAssigned": true
+    }
+}
+```
+
+==============================================================================================================
+**START JOB**
+
+**URL** : `/partner/dev/api/v1/booking/start/6191419c4250d65fe46e7c5d`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "Job started successfully",
+    "response": {
+        "_id": "6191419c4250d65fe46e7c5d",
+        "bookingId": "bHNHgea9A",
+        "bookingJourney": {
+            "stoppedAt": {},
+            "isStarted": true,
+            "isStopped": false,
+            "isCustomerPaid": false,
+            "amountPaidByCustomer": 0,
+            "startedAt": "2021-11-22T18:38:46.936Z"
+        }
+    }
+}
+```
