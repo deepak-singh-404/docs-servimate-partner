@@ -727,3 +727,32 @@
     }
 }
 ```
+
+=============================================================================================================
+**GET HOME SCREEN BANNER**
+
+**URL** : `partner/dev/api/v1/homescreen/banner`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "1 banners found successfully",
+    "response": [
+        {
+            "_id": "61a660dcbdc5ed4668b539a1",
+            "title": "Banner 1",
+            "picture": "https://res.cloudinary.com/dbzifmbj3/image/upload/v1638293725/pf3nwbo4dinsmotiaaxr.png",
+            "createdAt": "2021-11-30T17:35:24.888Z",
+            "__v": 0
+        }
+    ]
+}
+```
