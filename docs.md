@@ -756,3 +756,317 @@
     ]
 }
 ```
+
+=============================================================================================================
+**GET ALL COMPLETE BOOKINGS**
+
+**URL** : `partner/dev/api/v1/bookings/completed`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "count": 10,
+    "message": "Here is the completed bookings",
+    "response": [
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 400,
+                "startedAt": "2021-11-22T18:38:46.936Z",
+                "partnerFeedback": "He was good"
+            },
+            "isJobDone": true,
+            "_id": "6191419c4250d65fe46e7c5d",
+            "bookingId": "bHNHgea9A",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "cod",
+            "isPaid": false,
+            "timeSlot": "02:30 PM  -  03:00 PM",
+            "serviceDate": "2021-11-28",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-14T17:04:28.324Z",
+            "createdAt": "2021-11-14T17:04:28.324Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 5000,
+                "startedAt": "2021-12-02T05:16:34.267Z"
+            },
+            "isJobDone": true,
+            "_id": "619be06546f2c84f5071a4e8",
+            "bookingId": "81lMez1A4",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "cod",
+            "isPaid": false,
+            "timeSlot": "02:30 PM  -  03:00 PM",
+            "serviceDate": "2021-11-28",
+            "finalPrice": 3202,
+            "timeOfBooking": "2021-11-22T18:24:37.049Z",
+            "createdAt": "2021-11-22T18:24:37.049Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 400,
+                "startedAt": "2021-12-02T05:17:01.757Z"
+            },
+            "isJobDone": true,
+            "_id": "619fab560f3e100021e60283",
+            "bookingId": "mSIrp4b8s",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "03:30 PM  -  04:00 PM",
+            "serviceDate": "2021-11-27",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-25T15:27:18.343Z",
+            "createdAt": "2021-11-25T15:27:18.343Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 300,
+                "startedAt": "2021-12-02T05:20:42.839Z"
+            },
+            "isJobDone": true,
+            "_id": "619fb0c19fa9ab00508c1d7f",
+            "bookingId": "9rFgTXiru",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "03:00 PM  -  03:30 PM",
+            "serviceDate": "2021-11-28",
+            "finalPrice": 1374,
+            "timeOfBooking": "2021-11-25T15:50:25.641Z",
+            "createdAt": "2021-11-25T15:50:25.641Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 80,
+                "startedAt": "2021-12-02T05:22:27.868Z"
+            },
+            "isJobDone": true,
+            "_id": "619fb51b4829360066038077",
+            "bookingId": "lDfAnPZZu",
+            "customerName": "Nishant Kumar",
+            "address": {
+                "name": "Nishant",
+                "address": "Momo",
+                "phoneNumber": "+917254844368",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "cod",
+            "isPaid": false,
+            "timeSlot": "02:30 PM  -  03:00 PM",
+            "serviceDate": "2021-12-02",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-25T16:08:59.724Z",
+            "createdAt": "2021-11-25T16:08:59.724Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 600,
+                "startedAt": "2021-12-02T06:10:41.582Z"
+            },
+            "isJobDone": true,
+            "_id": "619fb6a14829360066038079",
+            "bookingId": "xIz5MdY7z",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "09:30 AM  -  10:30 AM",
+            "serviceDate": "2021-11-27",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-25T16:15:29.963Z",
+            "createdAt": "2021-11-25T16:15:29.963Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 330,
+                "startedAt": "2021-12-02T06:12:01.602Z"
+            },
+            "isJobDone": true,
+            "_id": "61a12b64b1cdab002ffbbc54",
+            "bookingId": "lDyDWhTWK",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "03:00 PM  -  03:30 PM",
+            "serviceDate": "2021-11-28",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-26T18:45:56.732Z",
+            "createdAt": "2021-11-26T18:45:56.732Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": false,
+                "amountPaidByCustomer": 40,
+                "startedAt": "2021-12-02T13:57:35.491Z"
+            },
+            "isJobDone": true,
+            "_id": "61a12bbe2d3fde003aeb1155",
+            "bookingId": "KjPp_4V22",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "06:30 PM  -  07:00 PM",
+            "serviceDate": "2021-11-30",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-11-26T18:47:26.113Z",
+            "createdAt": "2021-11-26T18:47:26.113Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": false,
+                "amountPaidByCustomer": 500,
+                "startedAt": "2021-12-02T16:33:57.124Z"
+            },
+            "isJobDone": true,
+            "_id": "61a58a8ab0ad090069e53d89",
+            "bookingId": "YWWp5Wwu7",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "Tower A, 401, Supertech Ecociti",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "11:30 AM  -  12:00 PM",
+            "serviceDate": "2021-12-01",
+            "finalPrice": 4159,
+            "timeOfBooking": "2021-11-30T02:20:58.909Z",
+            "createdAt": "2021-11-30T02:20:58.909Z",
+            "serviceProviderName": "Deepak Singh"
+        },
+        {
+            "bookingJourney": {
+                "isStarted": true,
+                "isStopped": true,
+                "isCustomerPaid": true,
+                "amountPaidByCustomer": 600,
+                "startedAt": "2021-12-02T06:15:22.653Z"
+            },
+            "isJobDone": true,
+            "_id": "61a8644359009400457214a7",
+            "bookingId": "8HEpRRmdV",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak",
+                "address": "Momo",
+                "phoneNumber": "+919415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Uttar Pradesh"
+            },
+            "modeOfPayment": "COD",
+            "isPaid": false,
+            "timeSlot": "09:30 AM  -  10:30 AM",
+            "serviceDate": "2021-12-01",
+            "finalPrice": 580,
+            "timeOfBooking": "2021-12-02T06:14:27.274Z",
+            "createdAt": "2021-12-02T06:14:27.274Z",
+            "serviceProviderName": "Deepak Singh"
+        }
+    ]
+}
+```
