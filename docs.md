@@ -1070,3 +1070,48 @@
     ]
 }
 ```
+=============================================================================================================
+**GET ALL CANCELLED BOOKINGS**
+
+**URL** : `partner/dev/api/v1/bookings/cancelled`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "count": 1,
+    "message": "Here its the cancelled bookings",
+    "response": [
+        {
+            "isJobDone": false,
+            "isCancelled": true,
+            "_id": "61aeecba55d0b3003dab4557",
+            "bookingId": "qOHHrreYx",
+            "customerName": "Deepak Singh",
+            "address": {
+                "name": "Deepak Singh",
+                "address": "A,401",
+                "phoneNumber": "9415332242",
+                "zipcode": 342311,
+                "city": "Jodhpur",
+                "state": "Rajasthan"
+            },
+            "timeSlot": "02:00 PM  -  02:30 PM",
+            "serviceDate": "2021-12-01",
+            "finalPrice": 1403,
+            "timeOfBooking": "2021-12-07T05:10:18.272Z",
+            "createdAt": "2021-12-07T05:10:18.272Z",
+            "cancelledAt": "2021-12-07T05:12:54.922Z",
+            "serviceProviderId": "619140d1ddfb25430cb2e3fd",
+            "serviceProviderName": "Deepak Singh"
+        }
+    ]
+}
+```
