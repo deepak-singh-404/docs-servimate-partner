@@ -1115,3 +1115,33 @@
     ]
 }
 ```
+============================================================================================================
+**GET PROFILE DETAILS**
+
+**URL** : `partner/dev/api/v1/profile`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : `Authorization` : `${token}`
+**Auth required** : YES
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "Profile Details",
+    "response": {
+        "isAccountOnHold": false,
+        "wallet": 300,
+        "_id": "619140d1ddfb25430cb2e3fd",
+        "name": "Deepak Singh",
+        "email": "",
+        "phoneNumber": 9415332242,
+        "imgUrl": "",
+        "remark": "",
+        "certificates": []
+    }
+}
+```
