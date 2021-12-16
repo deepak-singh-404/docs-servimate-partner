@@ -1145,3 +1145,43 @@
     }
 }
 ```
+
+============================================================================================================
+**SEND OTP**
+
+**URL** : `https://servimate-partner.herokuapp.com/partner/dev/api/v1/sendOTP?email=web.dev.deepaksingh@gmail.com`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : None
+**Auth required** : None
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "OTP has been sent to given email"
+}
+```
+
+============================================================================================================
+**VERIFY OTP**
+
+**URL** : `https://servimate-partner.herokuapp.com/partner/dev/api/v1/verifyOTP`
+**Method** : `GET`
+**Header** : `application/json`
+**Headers** : None
+**Auth required** : None
+**Permissions required** : None
+
+## Success Response 
+**Code** : `200`
+**Response**
+```json
+{
+    "success": true,
+    "message": "Password saved successfully"
+}
+```
