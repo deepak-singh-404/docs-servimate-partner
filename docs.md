@@ -1170,12 +1170,18 @@
 **VERIFY OTP**
 
 **URL** : `https://servimate-partner.herokuapp.com/partner/dev/api/v1/verifyOTP`
-**Method** : `GET`
+**Method** : `POST`
 **Header** : `application/json`
 **Headers** : None
 **Auth required** : None
 **Permissions required** : None
-
+```json
+{
+    "email":"web.dev.deepaksingh@gmail.com",
+    "OTP": 593540,
+    "password":"deepak"
+}
+```
 ## Success Response 
 **Code** : `200`
 **Response**
